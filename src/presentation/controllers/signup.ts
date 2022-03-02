@@ -1,7 +1,10 @@
 export default class SignUpController {
   handle (httpRequest: any): any {
-    return {
-      statusCode: 400
+    if (!httpRequest.name) {
+      return {
+        statusCode: 400
+      }
     }
+    return {}
   }
 }
