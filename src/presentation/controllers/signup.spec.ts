@@ -120,6 +120,6 @@ describe('SignUp Controller', () => {
 
     sut.handle(httpRequest)
 
-    expect(isValidSpy).toHaveBeenCalledWith('any_email@mail.com')
+    expect(isValidSpy).toHaveBeenCalledWith(httpRequest.body.email)
   })
 })
